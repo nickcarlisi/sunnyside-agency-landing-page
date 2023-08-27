@@ -1,0 +1,25 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include mixin.desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.imgContainer {
+  aspect-ratio: 1/1;
+  position: relative;
+
+  @include mixin.desktop {
+    aspect-ratio: 4/5;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

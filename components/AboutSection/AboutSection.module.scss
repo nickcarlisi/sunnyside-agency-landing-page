@@ -1,0 +1,103 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include mixin.desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gridChild:first-child {
+  @include mixin.desktop {
+    grid-column: 2/3;
+  }
+}
+.gridChild:nth-child(2) {
+  @include mixin.desktop {
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+}
+
+.gridChildCopyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  max-width: 600px;
+  margin-inline: auto;
+  padding: 5rem 0;
+
+  @include mixin.desktop {
+    width: 80%;
+    padding: 0;
+  }
+
+  p {
+    text-align: center;
+    padding: 3rem 0;
+
+    @include mixin.desktop {
+      text-align: left;
+    }
+  }
+}
+
+.gridChildImgContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5/4;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.btn {
+  font-family: var(--font-fraunces);
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  position: relative;
+  display: block;
+  padding: 0 0.5rem;
+  width: 130px;
+  margin-inline: auto;
+
+  @include mixin.desktop {
+    margin: 0;
+    display: inline-flex;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: mixin.$color-yellow;
+    opacity: 0.5;
+    bottom: -3px;
+    left: 0;
+    z-index: -1;
+    border-radius: 30px;
+    // transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.35s ease;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &.pink {
+    &:after {
+      background-color: mixin.$color-red;
+    }
+  }
+}

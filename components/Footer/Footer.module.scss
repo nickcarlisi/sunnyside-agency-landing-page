@@ -1,0 +1,37 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.footer {
+  background-color: mixin.$color-light-green;
+  color: mixin.$color-green;
+  padding: 5rem 0;
+}
+
+.footerFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.linksContainer {
+  ul {
+    display: flex;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    a {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.socialLinksContainer {
+  a {
+    margin: 0 1rem;
+  }
+}

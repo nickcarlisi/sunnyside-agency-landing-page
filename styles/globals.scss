@@ -1,0 +1,76 @@
+@use "./mixin.scss" as mixin;
+// @import url("https://use.typekit.net/vrb8ciu.css");
+@import "./reset.scss";
+// @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@700&display=swap");
+
+html,
+body {
+  font-family: var(--font-barlow);
+  scroll-behavior: smooth;
+}
+
+p {
+  line-height: 1.6;
+  color: mixin.$color-grey;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+  max-width: 1920px;
+
+  @include mixin.desktop {
+    width: 80%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-fraunces);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 3em;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5rem;
+
+  @include mixin.desktop {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: mixin.$color-black;
+
+  @include mixin.desktop {
+    text-align: left;
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  color: mixin.$color-light-grey;
+  letter-spacing: 0.25rem;
+  margin-bottom: 5rem;
+}
+
+h5 {
+  margin-bottom: 1rem;
+  color: mixin.$color-black;
+}
