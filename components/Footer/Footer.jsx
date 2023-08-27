@@ -5,21 +5,25 @@ import styles from "./Footer.module.scss";
 export default function Footer() {
   const socialLinks = [
     {
+      id: 1,
       alt: "facebook logo",
       url: "https://www.facebook.com/",
       img: "/images/icon-facebook.svg",
     },
     {
+      id: 2,
       alt: "instagram logo",
       url: "https://www.instagram.com/",
       img: "/images/icon-instagram.svg",
     },
     {
+      id: 3,
       alt: "twitter logo",
       url: "https://twitter.com/",
       img: "/images/icon-twitter.svg",
     },
     {
+      id: 4,
       alt: "pinterest logo",
       url: "https://www.pinterest.com/",
       img: "/images/icon-pinterest.svg",
@@ -56,7 +60,12 @@ export default function Footer() {
           <div className={styles.socialLinksContainer}>
             {socialLinks.map((link) => {
               return (
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={link.id}
+                >
                   <Image
                     className={styles.socialLogo}
                     src={link.img}
