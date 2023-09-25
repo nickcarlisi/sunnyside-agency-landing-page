@@ -3,23 +3,8 @@ import AboutSection from "@/components/AboutSection/AboutSection";
 import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSection";
 import ImageGrid from "@/components/ImageGrid/ImageGrid";
-import Slider from "@/components/Slider/Slider";
-
-const token =
-  "IGQWROODcybmxVSk1PMDByb0pGNmVha255SXlnejhGTTNHS1FHTDRKX042WGxLT2pCR3VsY2gxTEZAmUEFJeFBiaXNSNWY4ZAjdXVmx0T0s2U01adlVpdUlZAVS1MZA2F6SjFDZAlA3MUdjWTg5VkhIQkN3MnAzeGtkSVUZD";
-const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink,thumbnail_url&access_token=${token}`;
-
-const fetchInstagram = async () => {
-  const data = await fetch(url);
-  const feed = await data.json();
-  return feed;
-};
 
 export default async function Home() {
-  const instagramFeed = await fetchInstagram();
-
-  console.log(instagramFeed);
-
   const slides = [
     {
       id: 1,
@@ -135,7 +120,6 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <Slider slides={instagramFeed.data} />
       <AboutSection content={aboutContent} />
       <ServicesSection content={servicesContent} />
       <TestimonialsSection content={testimonialsContent} />
