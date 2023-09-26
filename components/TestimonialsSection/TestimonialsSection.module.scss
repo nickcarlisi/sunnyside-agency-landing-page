@@ -6,49 +6,13 @@
   @include mixin.desktop {
     padding: 10rem 0;
   }
-}
 
-.flexContainer {
-  width: 90%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-
-  @include mixin.desktop {
-    flex-direction: row;
-    gap: 2rem;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: mixin.$color-light-grey;
+    letter-spacing: 0.25rem;
+    margin-bottom: 5rem;
+    font-size: 1rem;
   }
-}
-
-.imgContainer {
-  position: relative;
-
-  img {
-    object-fit: cover;
-    border-radius: 50%;
-  }
-}
-
-.flexChild {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // gap: 2rem;
-}
-
-.copyContainer {
-  text-align: center;
-}
-
-.quote {
-  padding: 3rem 0;
-  color: mixin.$color-dark-grey;
-}
-
-.title {
-  color: mixin.$color-light-grey;
 }
