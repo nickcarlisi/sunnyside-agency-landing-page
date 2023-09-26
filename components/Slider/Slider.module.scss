@@ -15,23 +15,41 @@
   // }
 }
 
-.slideContainer {
-  position: relative;
+.swiper {
   width: 100%;
-  aspect-ratio: 1/1;
-  transition: border 0.3s ease;
+  height: 100%;
+}
 
-  &:hover {
-    border: 3px solid red;
-  }
+.slideContainer {
+  // position: relative;
+  // width: 100%;
+  // aspect-ratio: 1/1;
+  // transition: border 0.3s ease;
+  // border: 3px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // &:hover {
+  //   border: 3px solid red;
+  // }
   // @include mixin.tablet {
   //   aspect-ratio: 2/1;
   // }
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
+.imgContainer {
+  width: 72px;
+  height: 72px;
+  position: relative;
+  border-radius: 50%;
+  // border: 3px solid red;
+  overflow: hidden;
+  // border: 1px solid red;
+  // aspect-ratio: 1/1;
+  // @include mixin.tablet {
+  //   aspect-ratio: 2/1;
+  // }
 }
 
 .sliderImg {
@@ -40,14 +58,19 @@
   object-fit: cover;
 }
 
+.quote {
+  width: 90%;
+  text-align: center;
+  padding: 2rem;
+}
+
 .swiperNav {
   position: absolute;
   cursor: pointer;
   z-index: 1;
   // border: 1px solid mixin.$color-navy;
   padding: 0.5em;
-  // background-image: url("/logos-and-icons/Slider-White-Arrow-Left.svg");
-  background-color: red;
+  background-image: url("/images/arrow-prev.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -62,7 +85,7 @@
 }
 
 .swiperNavNext {
-  // background-image: url("/logos-and-icons/Slider-White-Arrow-Right.svg");
+  background-image: url("/images/arrow-next.svg");
   left: initial;
   right: 0px;
 }

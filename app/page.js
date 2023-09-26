@@ -5,24 +5,6 @@ import TestimonialsSection from "@/components/TestimonialsSection/TestimonialsSe
 import ImageGrid from "@/components/ImageGrid/ImageGrid";
 
 export default async function Home() {
-  const slides = [
-    {
-      id: 1,
-      img: "/images/desktop/image-gallery-cone.jpg",
-      alt: "slide 1",
-    },
-    {
-      id: 2,
-      img: "/images/desktop/image-gallery-milkbottles.jpg",
-      alt: "slide 2",
-    },
-    {
-      id: 3,
-      img: "/images/desktop/image-gallery-sugarcubes.jpg",
-      alt: "slide 3",
-    },
-  ];
-
   const aboutContent = [
     {
       id: 1,
@@ -69,26 +51,53 @@ export default async function Home() {
     },
   ];
 
-  const testimonialsContent = [
+  const slides = [
     {
       id: 1,
       img: "/images/image-emily.jpg",
-      copy: `We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.`,
+      alt: "slide 1",
       name: "Emily R.",
+      quote: `We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.`,
       title: "Marketing Director",
     },
     {
       id: 2,
       img: "/images/image-thomas.jpg",
-      copy: `Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.`,
+      alt: "slide 2",
       name: "Thomas S.",
+      quote: `Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.`,
       title: "Chief Operating Officer",
     },
     {
       id: 3,
       img: "/images/image-jennie.jpg",
-      copy: `Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!`,
+      alt: "slide 3",
       name: "Jennie F.",
+      quote: `Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!`,
+      title: "Business Owner",
+    },
+    {
+      id: 4,
+      img: "/images/image-lee.jpg",
+      alt: "slide 4",
+      name: "Lee M.",
+      quote: `Sunnyside’s creative flair elevated our brand, driving significant client growth in a competitive market.`,
+      title: "Marketing Director",
+    },
+    {
+      id: 5,
+      img: "/images/image-kami.jpg",
+      alt: "slide 5",
+      name: "Kami W.",
+      quote: `Sunnyside revolutionized our branding, skyrocketing our digital presence and revenue.`,
+      title: "Chief Operating Officer",
+    },
+    {
+      id: 6,
+      img: "/images/image-sharon.jpg",
+      alt: "slide 6",
+      name: "Sharon S.",
+      quote: `Thanks to Sunnyside, we experienced a surge in brand recognition and consumer engagement.`,
       title: "Business Owner",
     },
   ];
@@ -116,13 +125,12 @@ export default async function Home() {
     },
   ];
 
-  console.log(slides);
   return (
     <>
       <Hero />
       <AboutSection content={aboutContent} />
       <ServicesSection content={servicesContent} />
-      <TestimonialsSection content={testimonialsContent} />
+      <TestimonialsSection content={slides} />
       <ImageGrid content={imageGridContent} />
     </>
   );
